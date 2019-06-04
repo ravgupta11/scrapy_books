@@ -2,12 +2,18 @@ import json
 import locale
 import re
 import sys
-
+############################################## MAKE SURE TO RUN python create.py BEFORE RUNNING THIS SCRIPT.##############################
 # SYNTAX: python parse.py -q "attribute1 = value1, attribute2 = value2, attribute3 < value3 ..." -a "attribute1, attribute2, attribute3 ..." -c
 #-q is used to denote that succeeding string is conditions
 #-a is used to denote that succeeding string is attributes projected in query
 #-c is used to print the number of data entries in the view
-
+#FOR EXAMPLE: python parse.py -q "tag = Childrens, price > 12.23, rating = Two" -a "title, price"
+#rating are in words with first letter capital
+#tags are case-sensitive
+#tags ={Travel, Mystery, Historical Fiction, Sequential Art, Classics, Philosophy, Romance, Womens Fiction, Fiction, Childrens, Religion, Nonfiction, Music, Default, Science Fiction, Sports and Games, Add a comment, Fantasy, New Adult, Young Adult, Science, Poetry, Paranormal, Art, Psychology, Autobiography, Parenting, Adult Fiction, Humor, Horror, History, Food and Drink, Christian Fiction, Business, Biography, Thriller, Contemporary, Spirituality, Academic, Self Help, Historical, Christian, Suspense, Short Stories, Novels, Health, Politics, Cultural, Erotica, Crime}
+#ranting = {One, Two, Three, Four, Five}
+#attributes : {tag, title, rating, price, image_urls, product_desc}
+##############################################################################################################################################
 def project(view, attribute_list, count):
     strings = []
     attribute_list_full = ['tag', 'title', 'rating', 'price', 'image_urls', 'product_desc']
