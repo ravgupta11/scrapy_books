@@ -2,7 +2,7 @@ import json
 import locale
 import re
 import sys
-############################################## MAKE SURE TO RUN python create.py BEFORE RUNNING THIS SCRIPT.##############################
+############################################### MAKE SURE TO RUN python create.py BEFORE RUNNING THIS SCRIPT.##############################
 # SYNTAX: python parse.py -q "attribute1 = value1, attribute2 = value2, attribute3 < value3 ..." -a "attribute1, attribute2, attribute3 ..." -c
 #-q is used to denote that succeeding string is conditions
 #-a is used to denote that succeeding string is attributes projected in query
