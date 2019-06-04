@@ -11,7 +11,7 @@ import sys
 #rating are in words with first letter capital
 #tags are case-sensitive
 #tags ={Travel, Mystery, Historical Fiction, Sequential Art, Classics, Philosophy, Romance, Womens Fiction, Fiction, Childrens, Religion, Nonfiction, Music, Default, Science Fiction, Sports and Games, Add a comment, Fantasy, New Adult, Young Adult, Science, Poetry, Paranormal, Art, Psychology, Autobiography, Parenting, Adult Fiction, Humor, Horror, History, Food and Drink, Christian Fiction, Business, Biography, Thriller, Contemporary, Spirituality, Academic, Self Help, Historical, Christian, Suspense, Short Stories, Novels, Health, Politics, Cultural, Erotica, Crime}
-#ranting = {One, Two, Three, Four, Five}
+#rating = {One, Two, Three, Four, Five}
 #attributes : {tag, title, rating, price, image_urls, product_desc}
 ##############################################################################################################################################
 def project(view, attribute_list, count):
