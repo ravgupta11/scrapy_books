@@ -3,6 +3,10 @@ import locale
 import re
 import sys
 
+# SYNTAX: python parse.py -q "attribute1 = value1, attribute2 = value2, attribute3 < value3 ..." -a "attribute1, attribute2, attribute3 ..." -c
+#-q is used to denote that succeeding string is conditions
+#-a is used to denote that succeeding string is attributes projected in query
+#-c is used to print the number of data entries in the view
 
 def project(view, attribute_list, count):
     strings = []
@@ -18,9 +22,8 @@ def project(view, attribute_list, count):
         strings.append(s)
     if count:
         print(len(strings))
-    else:
-        with open('query_result', 'w') as f:
-            json.dump(strings, f)
+    with open('query_result', 'w') as f:
+        json.dump(strings, f)
 
 
 def is_number(parameter_i):
